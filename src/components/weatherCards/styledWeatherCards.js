@@ -12,7 +12,7 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   display: grid;
-  grid-template-columns: 2% 28% 40% 30%;
+  grid-template-columns: 30% 40% 30%;
   width: 100%;
   height: 80px;
   margin: 0 auto;
@@ -20,6 +20,9 @@ export const Card = styled.div`
   background-color: rgb(31, 66, 135);
   border-radius: 10px;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+  :hover {
+    margin-top: 8px;
+  }
 `
 
 export const CardItems = styled.div`
@@ -104,15 +107,5 @@ export const LowTempContainer = styled.div `
     font-weight: 100;
     font-size: 12px;
     line-height: 25px;
-  }
-`
-export const Close = styled.div`
-  z-index: 5;
-  img {
-    position: relative;
-    width: 15px;
-    height: 15px;
-    margin-left: 2px;
-    cursor: pointer;
   }
 `

@@ -1,5 +1,7 @@
 import React, { useEffect, useContext } from 'react';
-import { ModalContainer, Form, FormInput, Close, Select, Option, Error } from './styledModal';
+import { ModalContainer, Form, FormInput, Close, 
+  Select, Option, Error, Loader 
+} from './styledModal';
 import { WeatherContext } from '../../context/weatherContext'
 import { ModalContext } from '../../context/modalContext'
 import closeIcon from '../../images/weatherimg4.png';
@@ -48,15 +50,17 @@ const Modal = () => {
       return;
     }
 
+    
+    updateModalState(prevState => ({ ...prevState, loading: 'Loading...'}));
     const response = await fetch(`https://weather-app-backend-123.herokuapp.com/api/v1/current-weather?cityName=${cityName}&countryCode=${countryCode}`);
     const city = await response.json();
     if (response.status !== 200) {
       const error = "Error fetching data, Please confirm your city and/or country or Internet Connection";
-      updateModalState(prevState => ({ ...prevState, error}))
+      updateModalState(prevState => ({ ...prevState, error, loading: ''}))
       return;
     }
-    updateWeatherData(prevState => [...prevState, city])
-    updateModalState(prevState => ({ ...prevState, display: 'hide', countryCode: '', cityName: '', error: ''}))
+    updateWeatherData(prevState => [...prevState, city]);
+    updateModalState(prevState => ({ ...prevState, loading: '', display: 'hide', countryCode: '', cityName: '', error: ''}));
   } 
 
   const getCountries = () => {
@@ -77,6 +81,7 @@ const Modal = () => {
       <img src={closeIcon} alt="close" />
     </Close>
       <Form>
+        <Loader>{modalState.loading}</Loader>
         <Error>{modalState.error}</Error>
         <FormInput type="text" placeholder="City name" value={cityName} onChange={(e) => {updateForm(e, 'cityName')}} />
         <Select  defaultValue="Select country" onChange={(e) => {updateForm(e, 'countryCode')}}>

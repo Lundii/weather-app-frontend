@@ -30,7 +30,7 @@ export const Heading1 = styled.h3`
 `
 
 export const Date = styled(Heading1)`
-  margin-left: 140px;
+  margin-left: 130px;
 `
 export const Heading2 = styled(Heading1)`
   

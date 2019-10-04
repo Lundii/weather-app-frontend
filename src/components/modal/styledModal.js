@@ -18,6 +18,9 @@ export const Form = styled.div`
 export const Error = styled.h5`
   color: red;
 `
+export const Loader = styled.h5`
+  color: black;
+`
 export const Close = styled.div`
   img {
     width: 20px;

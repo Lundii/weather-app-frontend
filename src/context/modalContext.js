@@ -5,6 +5,7 @@ export const ModalContext = createContext();
 export const ModalProvider = (props) => {
   const [modalState, updateModalState] = useState({
     error: '',
+    loading: '',
     display: 'hide',
     cityName: '',
     countryCode: '',

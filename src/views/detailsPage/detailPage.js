@@ -11,7 +11,7 @@ const DetailsPage = (props) => {
     <Wrapper>
       <Header 
         date={date.toDateString()}
-        desc1={"Details"}
+        desc1={"Deta"}
         desc2={"Weather Now"}
       />
       <DetailsBody id={id} />

@@ -15,8 +15,8 @@ export const Details = styled.div`
 `
 
 export const Image = styled.div`
-  width: 172px;
-  height: 102px;
+  width: 160px;
+  height: 90px;
   margin: 0 auto;
   background-image: url("http://openweathermap.org/img/wn/${props => props.icon}@2x.png");
   background-size: cover;
@@ -28,19 +28,19 @@ export const Location = styled.h3`
   text-align: center;
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   margin-top: 10px;px;
 `
 
-export const MainWeather = styled.h3`
+export const MainWeather = styled.p`
   text-align: center;
   color: white;
   font-family: 'Barlow', sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 50px;
+  font-size: 16px;
+  line-height: 30px;
 `
 
 export const Temperature = styled.div`
@@ -48,32 +48,32 @@ export const Temperature = styled.div`
   color: white;
   font-family: 'Barlow', sans-serif;
   font-weight: 100;
-  font-size: 100px;
+  font-size: 80px;
 
     sup {
       font-family: 'Barlow', sans-serif;
       font-weight: 100;
-      font-size: 40px;
+      font-size: 30px;
     }
 `
 
-export const Description = styled.h3`
+export const Description = styled.p`
   text-align: center;
   color: white;
   font-family: 'Barlow', sans-serif;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
 `
 
 export const ExtraDetail = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 10px;
+  margin-top: 8px;
   h3 {
     text-align: center;
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 13px;
   }
 `

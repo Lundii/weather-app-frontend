@@ -12,7 +12,7 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   display: grid;
-  grid-template-columns: 30% 40% 30%;
+  grid-template-columns: 2% 28% 40% 30%;
   width: 100%;
   height: 80px;
   margin: 0 auto;
@@ -33,7 +33,7 @@ export const HighTempContainer = styled.div `
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;
 
     sup {
@@ -87,7 +87,7 @@ export const LowTempContainer = styled.div `
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 25px;
 
     sup {
@@ -106,11 +106,13 @@ export const LowTempContainer = styled.div `
     line-height: 25px;
   }
 `
-export const Close = styled.div `
+export const Close = styled.div`
+  z-index: 5;
   img {
-    width: 20px;
-    height: 20px;
-    margin-left: 260px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: 2px;
     cursor: pointer;
   }
 `

@@ -12,8 +12,8 @@ export const AddContainer = styled.div`
   position: absolute;
   right: 30px;
   bottom: 18px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: rgb(39, 142, 165);
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -23,8 +23,8 @@ export const AddContainer = styled.div`
   }
   h1 {
     text-align: center;
-    line-height: 60px;
-    font-size: 35px;
+    line-height: 50px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
   }

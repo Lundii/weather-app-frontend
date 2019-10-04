@@ -12,7 +12,7 @@ const Modal = () => {
 
   useEffect(() => {
     const fetchCountries = async () => {
-      const response = await fetch('http://localhost:5000/api/v1/countries');
+      const response = await fetch('https://weather-app-backend-123.herokuapp.com/api/v1/countries');
       const countries = await response.json();
       updateModalState(prevState => ({ ...prevState, countries: {...countries}}))
     }
@@ -20,7 +20,7 @@ const Modal = () => {
   }, []);
 
   const closeModal = () => {
-    updateModalState(prevState => ({ ...prevState, display: 'hide', countryCode: '', cityName: ''}));
+    updateModalState(prevState => ({ ...prevState, display: 'hide', countryCode: '', cityName: '', error: ''}));
   };
 
   const updateForm = (e, field) => {
@@ -48,15 +48,15 @@ const Modal = () => {
       return;
     }
 
-    const response = await fetch(`http://localhost:5000/api/v1/current-weather?cityName=${cityName}&countryCode=${countryCode}`);
+    const response = await fetch(`https://weather-app-backend-123.herokuapp.com/api/v1/current-weather?cityName=${cityName}&countryCode=${countryCode}`);
     const city = await response.json();
     if (response.status !== 200) {
-      const error = "Error fetching data, Please confirm your city and country";
+      const error = "Error fetching data, Please confirm your city and/or country or Internet Connection";
       updateModalState(prevState => ({ ...prevState, error}))
       return;
     }
     updateWeatherData(prevState => [...prevState, city])
-    updateModalState(prevState => ({ ...prevState, display: 'hide', countryCode: '', cityName: ''}))
+    updateModalState(prevState => ({ ...prevState, display: 'hide', countryCode: '', cityName: '', error: ''}))
   } 
 
   const getCountries = () => {

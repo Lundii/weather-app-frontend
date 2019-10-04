@@ -7,7 +7,7 @@ import {
   DescriptionContainer, LowTempContainer,
 } from './styledWeatherCards';
 
-const WeatherCards = (props) => {
+const WeatherCards = () => {
 
   const [weatherData] = useContext(WeatherContext);
   const [ modalState ] = useContext(ModalContext);

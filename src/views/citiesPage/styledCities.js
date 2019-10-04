@@ -4,9 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 375px;
-  height: 667px;
+  width: 350px;
+  height: 660px;
   margin: 0 auto;
-  margin-top: 20px;
   background-color: white;
 `

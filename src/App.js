@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, HashRouter } from "react-router-dom";
 import { RootContainer } from './styledApp';
 import { WeatherProvider } from './context/weatherContext';
 import { ModalProvider } from './context/modalContext';
@@ -11,12 +11,12 @@ function App() {
     <WeatherProvider>
       <ModalProvider>
         <RootContainer>
-        <Router>
+        <HashRouter basename="/">
           <Switch>
             <Route exact path="/" component={CityPage} />
             <Route path="/city/:id" component={DetailsPage} />
           </Switch>
-        </Router>
+        </HashRouter>
         </RootContainer>
       </ModalProvider>
     </WeatherProvider>

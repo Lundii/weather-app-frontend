@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ModalContext } from '../../context/modalContext'
 import { FooterContainer, AddContainer } from './styledFooter';
 
-const Footer = (props) => {
+const Footer = () => {
   const [modalState, updateModalState] = useContext(ModalContext);
 
   const showModal = () => {

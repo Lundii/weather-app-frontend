@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useContext } from 'react';
 import { ModalContainer, Form, FormInput, Close, 
   Select, Option, Error, Loader 

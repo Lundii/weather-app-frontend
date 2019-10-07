@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
 import { WeatherContext } from '../../context/weatherContext'
 import { ModalContext } from '../../context/modalContext';
 import { 
   CardsContainer, Card, CardItems, HighTempContainer, 
-  DescriptionContainer, LowTempContainer,
+  DescriptionContainer, LowTempContainer, StyledLink
 } from './styledWeatherCards';
 
 const WeatherCards = () => {
@@ -17,7 +16,7 @@ const WeatherCards = () => {
       const { id, highTemp, lowTemp, description, city, countryCode, mainWeather} = currentCity;
 
       return (
-        <Link key={id} to={`/city/${index}`}>
+        <StyledLink key={id} to={`/city/${index}`}>
           <Card>
             <CardItems>
               <HighTemp temp={highTemp} />
@@ -36,7 +35,7 @@ const WeatherCards = () => {
               />
             </CardItems>
           </Card>
-        </Link>
+        </StyledLink>
       )
     })
   } 
